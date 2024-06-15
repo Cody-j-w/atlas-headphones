@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('./fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
+         url('./fonts/sourcesanspro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('./fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
+         url('./fonts/sourcesanspro-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+/* Variables */
+:root {
+    /* colors */
+    --color-primary: #FF6565;
+    --color-dark: #071629;
+    --color-white: #FFFFFF;
+
+    /* fonts */
+    --font-sm: 12px;
+    --font-md: 14px;
+    --font-lg: 16px;
+    --font-xl: 32px;
+    font-family: 'source_sans_pro';
+
+
+}
+body {
+    margin: 0 auto;
+}
+
+/* layout */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    height: 800px;
+    display: flex;
+}
+
+@media (min-width: 481px) {
+    .col-md {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row-md {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hidden-md {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-sm {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row-sm {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hidden-sm {
+        display: none;
+    }
+
+    .wide-sm {
+        width: 100%;
+    }
+}
+
+/* header */
+header {
+    color: var(--color-white);
+    padding-top: 2.5%;
+}
+
+.logo {
+    width: 161px;
+}
+
+
+.page-header {
+    background-image: url('./images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: 30%;
+}
+
+@media (min-width: 481px){
+    .header {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-md {
+        width: 30%;
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        justify-content: center;
+    }
+
+    .header-row {
+        justify-content: flex-start;
+    }
+
+    .menu {
+        display: flex;
+        align-self: center;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .logo-container {
+        display: flex;
+        align-self: center;
+        margin: auto;
+    }
+}
+
+.nav-list {
+    font-size: var(--font-sm);
+    list-style: none;
+    justify-content: space-around;
+}
+
+.hero-content {
+    margin: auto;
+    margin-top: 300px;
+    width: 65%;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        margin-top: 100px;
+        width: 85%;
+    }
+
+.hero-heading {
+    font-size: var(--font-xl);
+    font-weight: bold;
+    line-height: 40.22px;
+    margin-bottom: 0;
+}
+.heading-container {
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-subheading {
+    justify-content: center;
+    margin-top: 0;
+}
+
+@media (max-width: 480px) {
+    .hero-subheading {
+        text-align: center;
+    }
+}
+
+.hero-description {
+    line-height: 26px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn-container-md {
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn-primary {
+    color: var(--color-white);
+    font-weight: 700;
+    background-color: var(--color-primary);
+    border-radius: 25px;
+    border-style: none;
+    height: 44px;
+    width: 162px;
+}
